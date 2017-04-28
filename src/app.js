@@ -2,7 +2,7 @@
  * @Author: dingxizheng
  * @Date:   2017-04-23 21:25:47
  * @Last Modified by:   dingxizheng
- * @Last Modified time: 2017-04-27 23:35:51
+ * @Last Modified time: 2017-04-27 23:47:46
  */
 
 'use strict';
@@ -83,7 +83,10 @@ server.listen(config.get("port"), function() {
 
     log.info(
       '%s v%s ready to accept connections on port %s in %s environment.',
-      server.name
+      server.name,
+      config.get("version"),
+      config.get("port"),
+      config.get("env")
     );
 
     // require('./routes');
